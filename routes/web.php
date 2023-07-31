@@ -11,7 +11,7 @@ use App\Http\Controllers\SantriController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\IzinController;
 use App\Http\Controllers\CreateselectController;
-use App\Http\Controllers\NamaController;
+// use App\Http\Controllers\NamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +24,12 @@ use App\Http\Controllers\NamaController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 /*
@@ -39,46 +43,46 @@ Route::get('/', function () {
 | di URI_1 tanpa parameter
 | di controller tanpa parameter
 */
-Route::get('/URI_1', [NamaController::class, 'nama_method_1'])->name('nama_route_1');
+// Route::get('/URI_1', [NamaController::class, 'nama_method_1'])->name('nama_route_1');
 
 /*
 | di URI_2 dengan parameter
 | di controller tanpa parameter
 */
-Route::get('/URI_2/{nama_parameter_2}', [NamaController::class, 'nama_method_2'])->name('nama_route_2');
+// Route::get('/URI_2/{nama_parameter_2}', [NamaController::class, 'nama_method_2'])->name('nama_route_2');
 
 /*
 | di URI_3 dengan parameter dan ada sub routenya
 | di controller tanpa parameter
 */
-Route::get('/URI_3/{nama_parameter_3}/nama_sub_route_3', [NamaController::class, 'nama_method_3'])->name('nama_route_3');
+// Route::get('/URI_3/{nama_parameter_3}/nama_sub_route_3', [NamaController::class, 'nama_method_3'])->name('nama_route_3');
 
 /*
 | di URI_4 dengan parameter
 | di controller dengan parameter
 */
-Route::get('/URI_4/{nama_parameter_4}', [NamaController::class, 'nama_method_4'])->name('nama_route_4');
+// Route::get('/URI_4/{nama_parameter_4}', [NamaController::class, 'nama_method_4'])->name('nama_route_4');
 
 /*
 | di URI_5 tanpa parameter
 | di controller dengan parameter
 | jadinya error!!
 */
-Route::get('/URI_5', [NamaController::class, 'nama_method_5'])->name('nama_route_5');
+// Route::get('/URI_5', [NamaController::class, 'nama_method_5'])->name('nama_route_5');
 
 /*
 | di URI_6 tanpa parameter
 | di controller dengan parameter
 | di view dengan parameter tanpa array
 */
-Route::get('/URI_6', [NamaController::class, 'nama_method_6'])->name('nama_route_6');
+// Route::get('/URI_6', [NamaController::class, 'nama_method_6'])->name('nama_route_6');
 
 /*
 | di URI_7 tanpa parameter
 | di controller dengan parameter
 | di view dengan parameter dengan array
 */
-Route::get('/URI_7', [NamaController::class, 'nama_method_7'])->name('nama_route_7');
+// Route::get('/URI_7', [NamaController::class, 'nama_method_7'])->name('nama_route_7');
 
 Auth::routes();
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Santri;
 use Illuminate\Http\Request;
 
-class SantriController extends Controller
+class PerijinanController extends Controller
 {
     /**
     * Display a listing of the resource.
